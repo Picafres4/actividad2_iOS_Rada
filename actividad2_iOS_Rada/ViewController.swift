@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var mensaje: UILabel!
+    
     @IBOutlet weak var labelNumer: UILabel!
     
     @IBOutlet weak var inputNumber: UITextField!
@@ -23,8 +26,11 @@ class ViewController: UIViewController {
         
         if inputNumber.text == labelNumer.text{
             view.backgroundColor = UIColor.green
+            mensaje.text = "adivinaste"
+            
         } else{
             view.backgroundColor = UIColor.red
+            mensaje.text = "no adivinaste"
         }
     }
     
